@@ -158,7 +158,6 @@ window.onload = function() {
     playerHit = new sound("Audio/BenOof.wav");
     playerDeath = new sound("Audio/BenDeath.wav")
     myMusic = new sound("Audio/music.wav");
-    myMusic.play();
 
     //Check if game is running
     if(!gameOverScreen)

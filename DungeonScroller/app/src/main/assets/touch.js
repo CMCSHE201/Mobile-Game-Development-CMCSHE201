@@ -73,6 +73,12 @@ function touchDown(evt) {
 	{
 	    //If game is in intro screen then play game
 	    introScreen = false;
+	    if(!musicPlaying)
+	    {
+	        myMusic.play();
+	        console.log("music play")
+	        musicPlaying = true;
+	    }
 	}
 	else
 	{
@@ -149,6 +155,12 @@ function touchDownM(evt) {
 	{
 	    //If game is in intro screen then play game
 	    introScreen = false;
+        if(!musicPlaying)
+	    {
+	        myMusic.play();
+	        console.log("music play")
+	        musicPlaying = true;
+	    }
 	}
 	else
 	{

@@ -140,7 +140,7 @@ function render() {
         {
             if(!mobile)
             {
-                timer += elapsed;
+                timer += (elapsed / 3);
             }
             else
             {

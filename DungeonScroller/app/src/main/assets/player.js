@@ -190,14 +190,30 @@ class Player{
     //Animate player
     animate()
     {
-        this.frameTimer = this.frameTimer - elapsed;
-        if(this.frameTimer <= 0)
+        if(mobile)
         {
-            this.frameTimer = this.frameTimeMax;
-            this.frame++;
-            if(this.frame > 3)
+            this.frameTimer = this.frameTimer - elapsed;
+            if(this.frameTimer <= 0)
             {
-                this.frame = 0;
+                this.frameTimer = this.frameTimeMax;
+                this.frame++;
+                if(this.frame > 3)
+                {
+                    this.frame = 0;
+                }
+            }
+        }
+        else
+        {
+            this.frameTimer = this.frameTimer - (elapsed / 5);
+            if(this.frameTimer <= 0)
+            {
+                this.frameTimer = this.frameTimeMax;
+                this.frame++;
+                if(this.frame > 3)
+                {
+                    this.frame = 0;
+                }
             }
         }
     }
